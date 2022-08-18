@@ -2,6 +2,15 @@ mqtt - weewx extension that sends data to an MQTT broker
 Copyright 2014-2020 Matthew Wall
 Distributed under the terms of the GNU Public License (GPLv3)
 
+vds fork notes:
+ - look for my initials in mqtt.py for a one-liner patch
+   that I needed to do here so that it uses float for the values.
+
+   My memory is hazy but I 'think' it was needed so that my setup
+   using telegraf to import into influxdb for a grafana dashboard
+   saved the value as a number.   This is likely me not knowing how
+   to set up telegraf appropriately to do it natively.
+
 ===============================================================================
 Pre-Requisites
 

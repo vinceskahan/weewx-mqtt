@@ -454,7 +454,8 @@ class MQTTThread(weewx.restx.RESTThread):
                     from_t = (v, from_unit, from_group)
                     v = weewx.units.convert(from_t, to_units)[0]
                 s = fmt % v
-                data[name] = s
+                ### data[name] = s       # mwall original
+                data[name] = float(s)    # vds hack to force floats for value
             except (TypeError, ValueError):
                 pass
         # FIXME: generalize this
