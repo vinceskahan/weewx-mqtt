@@ -1,3 +1,13 @@
+UPDATE - this has a patch/hack to force the data value to float,
+         as well as to set enable=false in the installer so it can
+         be installed without immediately configuring the extension.
+         I've bumped the version string accordingly.
+         
+(remainder of the readme below is unaltered...)
+
+
+
+
 mqtt - weewx extension that sends data to an MQTT broker
 Copyright 2014-2020 Matthew Wall
 Distributed under the terms of the GNU Public License (GPLv3)
