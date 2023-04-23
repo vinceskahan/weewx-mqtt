@@ -454,7 +454,8 @@ class MQTTThread(weewx.restx.RESTThread):
                     from_t = (v, from_unit, from_group)
                     v = weewx.units.convert(from_t, to_units)[0]
                 s = fmt % v
-                data[name] = s
+                ####data[name] = s
+                data[name] = float(s)        # vds hack to force data to float (for ingest into influxdb ultimately)
             except (TypeError, ValueError):
                 pass
         # FIXME: generalize this
